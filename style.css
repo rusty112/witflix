@@ -61,6 +61,7 @@ nav a {
     gap: 20px;
     font-size: 18px;
 }
+
 /* Featured Movie Section Styles */
 #featured-movie {
     padding: 50px 0;
@@ -188,9 +189,6 @@ nav a {
     border-radius: 3px;
 }
 
-
-/* --- DEĞİŞİKLİK BURADA BAŞLIYOR --- */
-
 .btn-play-card {
     background-color: #e50914;
     color: #fff;
@@ -203,26 +201,15 @@ nav a {
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    /* Opacity kaldırıldı, buton artık hep görünür */
-    border: 1px solid #e50914; /* Hover durumunda kaymayı önlemek için eklendi */
-    cursor: pointer; /* Buton olduğunu belirtmek için eklendi */
-    transition: background-color 0.3s, color 0.3s; /* Geçiş efekti güncellendi */
+    border: 1px solid #e50914;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Yeni eklenen hover efekti */
 .btn-play-card:hover {
-    background-color: #fff; /* Arka plan rengi beyaz oluyor */
-    color: #333; /* Yazı rengi koyu gri (siyah) oluyor */
+    background-color: #fff;
+    color: #333;
 }
-
-/* Bu kural artık gerekli olmadığı için kaldırıldı:
-.movie-poster:hover .btn-play-card {
-    opacity: 1;
-}
-*/
-
-/* --- DEĞİŞİKLİK BURADA BİTİYOR --- */
-
 
 .movie-card h3 {
     padding: 15px;
@@ -230,7 +217,6 @@ nav a {
     font-weight: 600;
     text-align: center;
 }
-
 
 /* Footer Styles */
 footer {
@@ -260,9 +246,27 @@ footer .container {
     gap: 10px;
 }
 
+/* İkon Hover Efektleri */
+
+.user-actions i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user-actions i:hover {
+    color: #e50914;
+}
+
 .footer-social i {
     font-size: 18px;
     margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, color 0.3s ease;
+}
+
+.footer-social i:hover {
+    color: #e50914;
+    transform: scale(1.15);
 }
 
 .app-links {
@@ -271,8 +275,16 @@ footer .container {
     gap: 10px;
 }
 
-.app-links img {
-    height: 30px;
-    width: auto;
+.app-links a {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
 }
 
+.app-links a:hover {
+    transform: scale(1.05);
+}
+
+.app-links img {
+    height: 40px;
+    width: auto;
+}
