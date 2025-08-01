@@ -1,4 +1,3 @@
-/* ===== GENEL AYARLAR VE DEĞİŞKENLER ===== */
 :root {
     --color-primary-start: #ff0a16;
     --color-primary-end: #ff6b35;
@@ -43,13 +42,12 @@ ul {
     padding: 0 20px;
 }
 
-/* Sayfa Açılış Animasyonu */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Gradient Text Efekti */
+
 .gradient-text {
     background: linear-gradient(90deg, var(--color-primary-start), var(--color-primary-end));
     background-clip: text;
@@ -58,7 +56,6 @@ ul {
 }
 
 
-/* ===== HEADER ===== */
 header {
     width: 100%;
     padding: 20px 0;
@@ -113,12 +110,12 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* ===== ANA İÇERİK (MAIN) ===== */
+
 main {
-    padding-top: 80px; /* Header yüksekliği kadar boşluk */
+    padding-top: 80px; 
 }
 
-/* Öne Çıkan Film */
+
 #featured-movie {
     height: 80vh;
     display: flex;
