@@ -27,7 +27,7 @@ ul {
     padding: 0 20px;
 }
 
-/* Header Stilleri */
+/* Header Styles */
 header {
     background-color: #fff;
     padding: 20px 0;
@@ -61,9 +61,9 @@ nav a {
     gap: 20px;
     font-size: 18px;
 }
+/* Featured Movie Section Styles */
 #featured-movie {
     padding: 50px 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0)), url('http://googleusercontent.com/image_collection/image_retrieval/11492033955396177156_0') no-repeat center center / cover;
 }
 
 #featured-movie h1 {
@@ -119,6 +119,8 @@ nav a {
 .btn-play i {
     margin-right: 8px;
 }
+
+/* Movie List Section Styles */
 .movie-list {
     padding: 40px 0;
 }
@@ -173,12 +175,12 @@ nav a {
     padding: 2px 6px;
     font-size: 12px;
     background-color: rgba(255, 255, 255, 0.8);
-    align-self: flex-start; /* Sol üste yasla */
+    align-self: flex-start;
     border-radius: 3px;
 }
 
 .movie-poster span:not(.rating) {
-    align-self: flex-start; /* Sol üste yasla */
+    align-self: flex-start;
     font-size: 12px;
     color: #333;
     background-color: rgba(255, 255, 255, 0.8);
@@ -186,6 +188,8 @@ nav a {
     border-radius: 3px;
 }
 
+
+/* --- DEĞİŞİKLİK BURADA BAŞLIYOR --- */
 
 .btn-play-card {
     background-color: #e50914;
@@ -199,13 +203,26 @@ nav a {
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
+    /* Opacity kaldırıldı, buton artık hep görünür */
+    border: 1px solid #e50914; /* Hover durumunda kaymayı önlemek için eklendi */
+    cursor: pointer; /* Buton olduğunu belirtmek için eklendi */
+    transition: background-color 0.3s, color 0.3s; /* Geçiş efekti güncellendi */
 }
 
+/* Yeni eklenen hover efekti */
+.btn-play-card:hover {
+    background-color: #fff; /* Arka plan rengi beyaz oluyor */
+    color: #333; /* Yazı rengi koyu gri (siyah) oluyor */
+}
+
+/* Bu kural artık gerekli olmadığı için kaldırıldı:
 .movie-poster:hover .btn-play-card {
     opacity: 1;
 }
+*/
+
+/* --- DEĞİŞİKLİK BURADA BİTİYOR --- */
+
 
 .movie-card h3 {
     padding: 15px;
@@ -215,7 +232,7 @@ nav a {
 }
 
 
-/* Footer Stilleri */
+/* Footer Styles */
 footer {
     background-color: #f3f3f3;
     padding: 30px 0;
