@@ -1,3 +1,4 @@
+/* ===== GENEL AYARLAR VE DEĞİŞKENLER ===== */
 :root {
     --color-primary-start: #ff0a16;
     --color-primary-end: #ff6b35;
@@ -371,3 +372,18 @@ footer h4 {
         margin: 10px auto;
     }
     .social-icons, .footer-apps {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .movies {
+        grid-template-columns: 1fr;
+    }
+    #featured-movie {
+        height: 100vh;
+    }
+    #featured-movie h1 {
+        font-size: 40px;
+    }
+}
