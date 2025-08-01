@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WitFlix - Movie App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>WitFlix - Modern Movie App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -28,7 +31,7 @@
         </div>
     </header>
     <main>
-        <section id="featured-movie" style="background: linear-gradient(to right, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.2)), url('https://image.tmdb.org/t/p/original/lyQBXz7Log5S4HnR_p4Wt21NdeI.jpg') no-repeat center center / cover;">
+        <section id="featured-movie">
             <div class="container">
                 <h1>The Shawshank Redemption</h1>
                 <div class="movie-meta">
@@ -37,14 +40,13 @@
                     <span>2 hr 22 min</span>
                 </div>
                 <p class="description">
-                    Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates.
+                    Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden.
                 </p>
                 <div class="movie-details">
-                    <p><strong>Starring:</strong> Tim Robbins, Morgan Freeman, Bob Gunton</p>
+                    <p><strong>Starring:</strong> Tim Robbins, Morgan Freeman</p>
                     <p><strong>Genre:</strong> Drama</p>
-                    <p><strong>Tags:</strong> Prison, Hope, Friendship</p>
                 </div>
-                <a href="#" class="btn-play"><i class="fas fa-play"></i> Play Now</a>
+                <a href="#" class="btn btn-play"><i class="fas fa-play"></i> Play Now</a>
             </div>
         </section>
 
@@ -52,32 +54,47 @@
             <div class="container">
                 <div class="list-header">
                     <h2>Popular Movies</h2>
-                    <a href="#" class="view-all">View All</a>
+                    <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="movies">
                     <div class="movie-card">
                         <div class="movie-poster" style="background-image: url('https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg');">
-                            <span class="rating">16+</span>
-                            <span>2 hr 55 min</span>
-                            <a href="#" class="btn-play-card"><i class="fas fa-play"></i> Play Now</a>
+                            <span class="poster-rating">16+</span>
                         </div>
-                        <h3>The Godfather</h3>
+                        <div class="card-content">
+                            <h3>The Godfather</h3>
+                            <div class="card-meta">
+                                <span><i class="fas fa-star"></i> 9.2</span>
+                                <span>2h 55m</span>
+                            </div>
+                            <a href="#" class="btn btn-play-card">Play Now</a>
+                        </div>
                     </div>
                     <div class="movie-card">
                         <div class="movie-poster" style="background-image: url('https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg');">
-                            <span class="rating">13+</span>
-                            <span>2 hr 32 min</span>
-                            <a href="#" class="btn-play-card"><i class="fas fa-play"></i> Play Now</a>
+                            <span class="poster-rating">13+</span>
                         </div>
-                        <h3>The Dark Knight</h3>
+                        <div class="card-content">
+                            <h3>The Dark Knight</h3>
+                            <div class="card-meta">
+                                <span><i class="fas fa-star"></i> 9.0</span>
+                                <span>2h 32m</span>
+                            </div>
+                            <a href="#" class="btn btn-play-card">Play Now</a>
+                        </div>
                     </div>
                     <div class="movie-card">
                         <div class="movie-poster" style="background-image: url('https://image.tmdb.org/t/p/original/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg');">
-                            <span class="rating">18+</span>
-                            <span>2 hr 34 min</span>
-                            <a href="#" class="btn-play-card"><i class="fas fa-play"></i> Play Now</a>
+                             <span class="poster-rating">18+</span>
                         </div>
-                        <h3>Pulp Fiction</h3>
+                         <div class="card-content">
+                            <h3>Pulp Fiction</h3>
+                             <div class="card-meta">
+                                <span><i class="fas fa-star"></i> 8.9</span>
+                                <span>2h 34m</span>
+                            </div>
+                            <a href="#" class="btn btn-play-card">Play Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,34 +102,49 @@
         
         <section class="movie-list">
             <div class="container">
-                 <div class="list-header">
+                <div class="list-header">
                     <h2>Recommended for You</h2>
-                    <a href="#" class="view-all">View All</a>
+                    <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="movies">
                     <div class="movie-card">
                         <div class="movie-poster" style="background-image: url('https://image.tmdb.org/t/p/original/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg');">
-                            <span class="rating">13+</span>
-                            <span>3 hr 21 min</span>
-                            <a href="#" class="btn-play-card"><i class="fas fa-play"></i> Play Now</a>
+                            <span class="poster-rating">13+</span>
                         </div>
-                        <h3>The Lord of the Rings: The Return of the King</h3>
+                        <div class="card-content">
+                            <h3>The Lord of the Rings: The Return of the King</h3>
+                            <div class="card-meta">
+                                <span><i class="fas fa-star"></i> 8.9</span>
+                                <span>3h 21m</span>
+                            </div>
+                            <a href="#" class="btn btn-play-card">Play Now</a>
+                        </div>
                     </div>
                     <div class="movie-card">
                         <div class="movie-poster" style="background-image: url('https://image.tmdb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg');">
-                            <span class="rating">13+</span>
-                            <span>2 hr 28 min</span>
-                            <a href="#" class="btn-play-card"><i class="fas fa-play"></i> Play Now</a>
+                            <span class="poster-rating">13+</span>
                         </div>
-                        <h3>Inception</h3>
+                        <div class="card-content">
+                            <h3>Inception</h3>
+                            <div class="card-meta">
+                                <span><i class="fas fa-star"></i> 8.8</span>
+                                <span>2h 28m</span>
+                            </div>
+                            <a href="#" class="btn btn-play-card">Play Now</a>
+                        </div>
                     </div>
                     <div class="movie-card">
                         <div class="movie-poster" style="background-image: url('https://image.tmdb.org/t/p/original/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg');">
-                            <span class="rating">13+</span>
-                            <span>2 hr 22 min</span>
-                            <a href="#" class="btn-play-card"><i class="fas fa-play"></i> Play Now</a>
+                             <span class="poster-rating">13+</span>
                         </div>
-                        <h3>Forrest Gump</h3>
+                         <div class="card-content">
+                            <h3>Forrest Gump</h3>
+                             <div class="card-meta">
+                                <span><i class="fas fa-star"></i> 8.8</span>
+                                <span>2h 22m</span>
+                            </div>
+                            <a href="#" class="btn btn-play-card">Play Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,25 +152,33 @@
     </main>
     <footer>
         <div class="container">
-            <div class="footer-links">
-                <a href="#">Terms of Use</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">FAQ</a>
-                <a href="#">Watch List</a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">WitFlix</div>
+                    <p>Your one-stop destination for movies and series.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="footer-apps">
+                    <h4>Get The App</h4>
+                    <a href="#"><img src="https://www.logo.wine/a/logo/App_Store_(iOS)/App_Store_(iOS)-Badge-Logo.wine.svg" alt="App Store"></a>
+                    <a href="#"><img src="https://www.logo.wine/a/logo/Google_Play/Google_Play-Badge-Logo.wine.svg" alt="Google Play"></a>
+                </div>
             </div>
-            <div class="footer-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, voluptas vero. Maxime, sapiente? Omnis dolorum debitis similique corrupti voluptate, tempora odit illum. Nascuntur, provident magnam.</p>
-            </div>
-            <div class="footer-social">
-                <span>Follow Us</span>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-youtube"></i>
-            </div>
-            <div class="app-links">
-                <span>Apps</span>
-                <a href="#"><img src="https://www.logo.wine/a/logo/App_Store_(iOS)/App_Store_(iOS)-Badge-Logo.wine.svg" alt="App Store"></a>
-                <a href="#"><img src="https://www.logo.wine/a/logo/Google_Play/Google_Play-Badge-Logo.wine.svg" alt="Google Play"></a>
+            <div class="footer-bottom">
+                &copy; 2025 WitFlix. All Rights Reserved.
             </div>
         </div>
     </footer>
