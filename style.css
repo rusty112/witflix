@@ -63,6 +63,7 @@ nav a {
 }
 #featured-movie {
     padding: 50px 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0)), url('http://googleusercontent.com/image_collection/image_retrieval/11492033955396177156_0') no-repeat center center / cover;
 }
 
 #featured-movie h1 {
@@ -146,17 +147,25 @@ nav a {
 
 .movie-card {
     background-color: #f9f9f9;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
 }
 
 .movie-poster {
-    height: 200px;
-    background-color: #e0e0e0; /* Resim yerine geçici arkaplan */
+    height: 450px;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
     position: relative;
-    border: 1px solid #eee;
 }
 
 .movie-poster .rating {
@@ -165,6 +174,7 @@ nav a {
     font-size: 12px;
     background-color: rgba(255, 255, 255, 0.8);
     align-self: flex-start; /* Sol üste yasla */
+    border-radius: 3px;
 }
 
 .movie-poster span:not(.rating) {
@@ -189,6 +199,12 @@ nav a {
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.movie-poster:hover .btn-play-card {
+    opacity: 1;
 }
 
 .movie-card h3 {
@@ -233,9 +249,9 @@ footer .container {
 }
 
 .app-links {
-     display: flex;
-     flex-direction: column;
-     gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .app-links img {
