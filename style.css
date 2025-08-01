@@ -121,9 +121,9 @@ main {
     display: flex;
     align-items: center;
     background-size: cover;
-    background-position: center; /* Resmin ortalanması için pozisyon güncellendi */
+    background-position: center; 
     position: relative;
-    /* DEĞİŞİKLİK: Filmle ilgili ikonik bir sahne arka plan olarak ayarlandı */
+    
     background-image: url('https://images7.alphacoders.com/418/418512.jpg');
 }
 
@@ -131,7 +131,7 @@ main {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    /* DEĞİŞİKLİK: Resmi daha silik yapmak ve metin okunurluğunu artırmak için gradient güçlendirildi */
+    
     background: linear-gradient(90deg, var(--color-dark) 35%, rgba(16, 16, 18, 0.8) 60%, transparent 100%),
                 linear-gradient(to top, var(--color-dark) 10%, transparent 50%);
 }
@@ -180,7 +180,7 @@ main {
 }
 
 
-/* ===== FİLM LİSTELERİ VE KARTLAR ===== */
+
 .movie-list {
     padding: 60px 0;
 }
@@ -207,7 +207,7 @@ main {
     perspective: 1000px;
 }
 
-/* Glassmorphism Kart Tasarımı */
+
 .movie-card {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
@@ -261,7 +261,7 @@ main {
     color: #f5c518;
 }
 
-/* ===== BUTONLAR ===== */
+
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -291,7 +291,7 @@ main {
 }
 
 
-/* ===== FOOTER ===== */
+
 footer {
     padding: 50px 0;
     background-color: var(--color-dark-light);
@@ -344,7 +344,7 @@ footer h4 {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ===== RESPONSIVE TASARIM ===== */
+
 @media (max-width: 992px) {
     #featured-movie h1 {
         font-size: 48px;
