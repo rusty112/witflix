@@ -77,14 +77,28 @@ header .container {
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    /* Gradientli Logo */
-    background: linear-gradient(90deg, var(--color-primary-start), var(--color-primary-end));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    /* Font ailesini Bebas Neue olarak ayarlıyoruz. */
+    font-family: 'Bebas Neue', sans-serif; 
+    
+    /* Netflix kırmızısı */
+    color: #E50914; 
+    
+    /* Font boyutunu biraz artırıyoruz */
+    font-size: 36px; 
+
+    /* Harf aralığını artırarak daha okunaklı yapıyoruz */
+    letter-spacing: 2px;
+    
+    /* 3D efekti için metin gölgesi ekliyoruz */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+
+    /* Animasyonlu geçiş için */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    /* Üzerine gelince hafif büyüme efekti */
+    transform: scale(1.05);
 }
 
 nav ul {
