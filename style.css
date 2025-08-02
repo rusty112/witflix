@@ -76,35 +76,46 @@ header .container {
     align-items: center;
 }
 
-/* Ana logo konteyneri olan div'i ayarlar */
 .logo {
-    line-height: 1; /* Dikey hizalama sorunlarını önler */
-}
-
-/* Logonun SVG elementini boyutlandırır */
-.logo svg {
-    width: 140px; /* Logonun genişliği */
-    height: auto;
-    overflow: visible; /* Metnin taşmasını engeller */
-}
-
-/* SVG içindeki asıl metni biçimlendirir */
-.logo .logo-text {
-    /* Font ailesi */
-    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    font-weight: 900; /* Netflix'in kalın yazı tipi için */
+    letter-spacing: -1px;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     
-    /* Netflix kırmızısı (SVG'de renk 'fill' ile verilir) */
-    fill: #E50914;
-
-    /* Font boyutu */
-    font-size: 42px;
-
-    /* Harf aralığı */
-    letter-spacing: 1px;
+    /* Netflix'in kırmızı rengi yerine mevcut gradient'inizi koruyabilirsiniz */
+    background: linear-gradient(90deg, var(--color-primary-start), var(--color-primary-end));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     
-    /* Resimdeki gibi alttan gölge efekti */
-    text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+    /* Netflix tarzı gölge efekti */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    
+    /* Netflix tarzı kavis efekti */
+    transform: skew(-8deg); /* Sola doğru eğim */
+    font-style: italic; /* İtalik yazı */
+    
+    /* Hover efekti ekleyelim */
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
+
+.logo:hover {
+    transform: skew(-8deg) scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Alternatif olarak, tamamen Netflix rengini kullanmak istiyorsanız: */
+.logo.netflix-style {
+    background: #e50914; /* Netflix'in orijinal kırmızısı */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+
+}
+
+
 
 nav ul {
     display: flex;
