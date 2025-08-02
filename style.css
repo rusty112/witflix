@@ -76,29 +76,34 @@ header .container {
     align-items: center;
 }
 
+/* Ana logo konteyneri olan div'i ayarlar */
 .logo {
-    /* Font ailesini Bebas Neue olarak ayarlıyoruz. */
-    font-family: 'Bebas Neue', sans-serif; 
-    
-    /* Netflix kırmızısı */
-    color: #E50914; 
-    
-    /* Font boyutunu biraz artırıyoruz */
-    font-size: 36px; 
-
-    /* Harf aralığını artırarak daha okunaklı yapıyoruz */
-    letter-spacing: 2px;
-    
-    /* 3D efekti için metin gölgesi ekliyoruz */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
-
-    /* Animasyonlu geçiş için */
-    transition: transform 0.3s ease;
+    line-height: 1; /* Dikey hizalama sorunlarını önler */
 }
 
-.logo:hover {
-    /* Üzerine gelince hafif büyüme efekti */
-    transform: scale(1.05);
+/* Logonun SVG elementini boyutlandırır */
+.logo svg {
+    width: 140px; /* Logonun genişliği */
+    height: auto;
+    overflow: visible; /* Metnin taşmasını engeller */
+}
+
+/* SVG içindeki asıl metni biçimlendirir */
+.logo .logo-text {
+    /* Font ailesi */
+    font-family: 'Bebas Neue', sans-serif;
+    
+    /* Netflix kırmızısı (SVG'de renk 'fill' ile verilir) */
+    fill: #E50914;
+
+    /* Font boyutu */
+    font-size: 42px;
+
+    /* Harf aralığı */
+    letter-spacing: 1px;
+    
+    /* Resimdeki gibi alttan gölge efekti */
+    text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 }
 
 nav ul {
